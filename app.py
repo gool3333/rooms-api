@@ -29,7 +29,7 @@ def validate_booking(data):
     if not isinstance(who, str) or not who.strip():
         return "укажите, кто бронирует (who)"
     if any(b["room"] == room and b["hour"] == hour for b in BOOKINGS):
-        return "это время уже занято"
+        return "занято"
     return None
 
 
