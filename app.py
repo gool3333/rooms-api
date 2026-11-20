@@ -11,6 +11,7 @@ ROOMS = {
     "orion": {"name": "Орион", "seats": 6},
     "vega": {"name": "Вега", "seats": 10},
     "lyra": {"name": "Лира", "seats": 4},
+    "atlas": {"name": "Атлас", "seats": 8},
 }
 OPEN_HOUR, CLOSE_HOUR = 9, 18
 BOOKINGS = []
