@@ -1,0 +1,10 @@
+# «Сервер» для лабораторной: запускает образ, который собрал и опубликовал GitHub Actions.
+# Значения DOCKERHUB_USER и TAG берутся из файла deploy/.env (его вы создаёте сами).
+name: rooms-prod
+
+services:
+  api:
+    image: ${DOCKERHUB_USER:?нет DOCKERHUB_USER в deploy/.env}/rooms-api:${TAG:?нет TAG в deploy/.env}
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
